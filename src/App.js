@@ -1,12 +1,14 @@
-import Router from './components/Router';
+import Main from './layouts/Main';
 import Footer from './layouts/Footer';
 import styled from 'styled-components';
 
 const App = () => {
   return (
     <StyledApp>
-      <Router />
-      <Footer />
+      <section>
+        <Main />
+        <Footer />
+      </section>
     </StyledApp >
   );
 };
