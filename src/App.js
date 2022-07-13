@@ -1,20 +1,21 @@
-import Main from './layouts/Main';
-import Footer from './layouts/Footer';
 import styled from 'styled-components';
+import Login from './layouts/Login';
+import Footer from './layouts/Footer';
 
 const App = () => {
   return (
-    <StyledApp>
-      <section>
-        <Main />
-        <Footer />
-      </section>
-    </StyledApp >
+    <StyledSection>
+      <Login />
+      <Footer />
+    </StyledSection>
   );
 };
 
-const StyledApp = styled.div`
-    text-align: center;
+const StyledSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fafafa;
 `;
 
 export default App;
