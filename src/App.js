@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Login from './layouts/Login';
-import Footer from './layouts/Footer';
+import Login from './layouts/login/Login';
+import Footer from './layouts/footer/Footer';
 
 const App = () => {
   return (

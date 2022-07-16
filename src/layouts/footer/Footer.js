@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import * as S from './Footer.styled';
 
 const footerMenus = [
     { id: 1, link: '/meta', value: 'Meta', },
@@ -18,31 +17,18 @@ const footerMenus = [
 
 const Footer = () => {
     const footerElements = footerMenus.map(footerMenu =>
-        <Link key={footerMenu.id} to={footerMenu.link} style={{ textDecoration: 'none' }}><StyledFooterElement>{footerMenu.value}</StyledFooterElement></Link>
+        <S.Link key={footerMenu.id} to={footerMenu.link}>
+            <S.FooterElement>{footerMenu.value}</S.FooterElement>
+        </S.Link>
     ).reduce((prev, curr) => prev === null ? [curr] : [...prev, curr], null);
 
     console.log(footerElements);
 
     return (
-        <StyledFooter>
+        <S.Footer>
             {footerElements}
-        </StyledFooter>
+        </S.Footer>
     );
 };
-
-const StyledFooter = styled.footer`
-    display: flex;
-    flex-direction: row; // default;
-    justify-content: center;
-    height: 157px;
-    padding: 0 16px 0 16px;
-`;
-
-const StyledFooterElement = styled.div`
-    display: inline;
-    color: #8e8e8e;
-    margin: 0 8px 0 8px;
-    font-size: 12px;
-`;
 
 export default Footer;
