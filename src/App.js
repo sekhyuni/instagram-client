@@ -1,21 +1,20 @@
-import styled from 'styled-components';
-import Login from './layouts/login/Login';
-import Footer from './layouts/footer/Footer';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/login/Login';
+import Home from './pages/home/Home';
+import NotFound from './pages/notfound/NotFound';
 
 const App = () => {
+  const [isAuthorized, setIsAuthorized] = useState(false);
+
   return (
-    <StyledSection>
-      <Login />
-      <Footer />
-    </StyledSection>
+    <Router>
+      <Routes>
+        <Route path="/" element={isAuthorized ? <Home onChangeAuth={setIsAuthorized} /> : <Login onChangeAuth={setIsAuthorized} />}></Route>
+        <Route path="/*" element={<NotFound />}></Route>
+      </Routes>
+    </Router>
   );
 };
-
-const StyledSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: #fafafa;
-`;
 
 export default App;

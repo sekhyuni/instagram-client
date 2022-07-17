@@ -1,17 +1,9 @@
 import axios from 'axios';
 
-const doAxiosRequest = async (method, url, data) => {
-    try {
-        const response = await axios({
-            method,
-            url,
-            data,
-        });
-
-        return response;
-    } catch (error) {
-        console.error(error);
-    }
-};
+const doAxiosRequest = (method, url, data) => axios({
+    method,
+    url,
+    data,
+});
 
 export default doAxiosRequest;
