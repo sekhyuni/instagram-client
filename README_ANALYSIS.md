@@ -20,10 +20,46 @@
                 // entry JS File
                 if (module.hot) module.hot.accept();
                 ```
+1. [JSX]
+    1. 정의 : React에서 사용되는 JavaScript 확장 구문
+    1. JavaScript 표현식
+        ```javascript
+        const element = <h1>{name}</h1>;
+1. [props]
+    1. 정의 : Component에 전달되는 데이터로, 동적으로 수정 불가
+        ```javascript
+        const App = () => {
+            <Button name="클릭"></Button>
+        };
+
+        const Button = (props) => {
+            return (
+                <button>{props.name}</button>
+            );
+        };
+1. [state]
+    1. 정의 : Component 내에서 관리되는 데이터로, 동적으로 수정 가능
+        ```javascript
+        const App = () => {
+            const [state, setState] = useState(1);
+
+            return (
+                <div>{state}</div>
+                <Button onChangeState={setState}></Button>
+            );
+        };
+
+        const Button = ({ onChangeState }) => {
+            return (
+                <button onClick={() => {
+                    onChangeState(2);
+                }}>클릭</button>
+            )
+        };
 1. [Router] react-router-dom
     - BrowserRouter -> Routes -> Route 순으로 감싸고, Route의 element 속성 내에 Link가 들어간 Component를 넣음
-1. [Component] import, export
-1. 반응형 웹 구현
+1. [flex]
+1. [반응형 웹]
 
 * * *
 
