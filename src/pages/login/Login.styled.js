@@ -1,35 +1,45 @@
 import { Link as Link_ } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Main = styled.main`
+const Vertical = css`
     display: flex;
     flex-direction: column;
 `;
 
+const Center = css`
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Section = styled.section`
+    ${Vertical}
+    height: 100%;
+    background-color: #fafafa;
+`;
+
+export const Main = styled.main`
+    ${Vertical}
+`;
+
 export const Article = styled.article`
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin: 32px 0 0 0;
     padding: 0 0 32px 0;
 `;
 
 export const Div = styled.div`
-    display: flex;
-    flex-direction: column;
+    ${Vertical}
     width: 350px;
 `;
 
 export const DivForHorizontalItems = styled.div`
     display: flex;
-    flex-direction: row;
 `;
 
 export const DivOfLoginForm = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center; // Vertical일 때, Items 세로축 정렬
-    align-items: center;
+    ${Vertical}
+    ${Center}
     width: 100%;
     height: 396px;
     border: 1px solid #dbdbdb;
@@ -40,9 +50,7 @@ export const DivOfLoginForm = styled.div`
 
 export const DivOfJoinForm = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    ${Center}
     width: 100%;
     height: 63px;
     border: 1px solid #dbdbdb;
@@ -51,56 +59,53 @@ export const DivOfJoinForm = styled.div`
 `;
 
 export const DivOfAppDownForm = styled.div`
-    display: flex;
-    flex-direction: column;
+    ${Vertical}
     align-items: center; // Vertical일 때, Items 가로축 정렬
     width: 100%;
     height: 102px;
 `;
 
 export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
+    ${Vertical}
     align-items: center; // Vertical일 때, Items 가로축 정렬
     width: 348px;
     height: 265px;
 `;
 
 export const Label = styled.label`
-    display: flex;
-    flex-direction: column;
+    ${Vertical}
     width: 268px;
     height: 38px;
     margin: 0 0 6px 0;
 `;
 
 export const Span = styled.span`
-    color: #8e8e8e;
+    position: absolute;
+    margin: 0 0 0 7px;
     font-size: 10px;
     line-height: 20px;
-    margin: 0 0 0 7px;
-    position: absolute;
+    color: #8e8e8e;
 `;
 
 export const Input = styled.input`
     height: 100%;
-    background-color: #fafafa;
     border: 1px solid;
-    border-color: #dbdbdb;
     border-radius: 3px;
+    border-color: #dbdbdb;
+    background-color: #fafafa;
 `;
 
 export const Button = styled.button`
     width: 268px;
     height: 30px;
-    color: #fff;
-    background-color: #0095f6;
     border: 1px solid;
-    border-color: #0095f6;
     border-radius: 4px;
+    border-color: #0095f6;
     margin: 8px 0 8px 0;
     font-size: 14px;
     font-weight: bold;
+    color: #fff;
+    background-color: #0095f6;
     cursor: pointer;
 `;
 
@@ -109,15 +114,11 @@ export const ImageOfInstagramMain = styled.img`
     height: 540px;
 `;
 
-export const DivOfImageWrapper = styled.div`
-
-`;
-
 export const ImageOfInstagram = styled.img`
+    flex: 1;
     width: 175px;
     height: 51px;
     margin: 36px 0 12px 0;
-    flex: 1;
 `;
 
 export const ImageOfAppDown = styled.img`
@@ -132,7 +133,7 @@ export const P = styled.p`
 `;
 
 export const Link = styled(Link_)`
-    color: #0095f6;
     font-weight: bold;
     text-decoration: none;
+    color: #0095f6;
 `;

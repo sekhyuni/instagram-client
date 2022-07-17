@@ -4,8 +4,9 @@ const proxy = {
 }
 
 module.exports = (app) => {
-    app.use(
-        '/api',
+    app.use([
+        '/accounts',
+    ],
         createProxyMiddleware(proxy)
     );
 };
