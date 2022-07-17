@@ -27,6 +27,10 @@ export const Main = styled.main`
     align-items: center;
 `;
 
+export const Div = styled.div`
+    display: flex;
+`;
+
 export const ImageOfInstagram = styled.img`
     width: 103px;
     height: 29px;
@@ -34,8 +38,4 @@ export const ImageOfInstagram = styled.img`
 
 export const Link = styled(Link_)`
 
-`;
-
-export const Div = styled.div`
-    display: flex;
 `;
