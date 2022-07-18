@@ -20,7 +20,6 @@ export const Section = styled.section`
 
 export const Nav = styled.nav`
     display: flex;
-    ${Center}
     width: 100%;
     height: 55px;
     border-bottom: 1px solid #dbdbdb;
@@ -61,7 +60,11 @@ export const NavMenuWrapper = styled.div`
 export const Input = styled.input`
     width: 236px;
     height: 36px;
+    border: 1px solid #efefef;
+    border-radius: 8px;
     padding: 0 16px 0 16px;
+    background-color: #efefef;
+    font-size: 100%;
 `;
 
 export const ImageOfInstagram = styled.img`
@@ -70,6 +73,10 @@ export const ImageOfInstagram = styled.img`
 `;
 
 export const Link = styled(Link_)`
-    ${Vertical}
-    justify-content: center;
+    display: flex;
+`;
+
+export const Img = styled.img`
+    width: 24px;
+    height: 24px;
 `;

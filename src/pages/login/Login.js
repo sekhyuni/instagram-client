@@ -41,6 +41,7 @@ const Form = ({ onChangeAuth }) => {
                             alert(`Login ${result.data}`);
                             console.log(result);
                         }).catch(error => {
+                            alert(`Login ${error.response.data}`);
                             console.error(error);
                         });
                 }}>
