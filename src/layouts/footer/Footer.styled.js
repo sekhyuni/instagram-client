@@ -20,11 +20,13 @@ export const Footer = styled.footer`
 
 export const FooterTopElementWrapper = styled.div`
     display: flex;
+    flex-direction: row;
     height: 23px;   
 `;
 
 export const FooterBottomElementWrapper = styled.div`
     display: flex;
+    flex-direction: row;
     height: 11px;   
     margin: 12px 0 12px 0;
 `;

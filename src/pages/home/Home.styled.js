@@ -20,8 +20,9 @@ export const Section = styled.section`
 
 export const Nav = styled.nav`
     display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 55px;
+    height: 60px;
     border-bottom: 1px solid #dbdbdb;
     padding: 0 20px 0 20px;
     background-color: #fff;
@@ -35,6 +36,7 @@ export const Main = styled.main`
 
 export const HeaderOfContent = styled.div`
     display: flex;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
     height: 85px;
@@ -49,6 +51,7 @@ export const MainOfContent = styled.div`
 
 export const Div = styled.div`
     display: flex;
+    flex-direction: row;
     align-items: center;
     flex: 1;
 `;
@@ -74,6 +77,7 @@ export const ImageOfInstagram = styled.img`
 
 export const Link = styled(Link_)`
     display: flex;
+    flex-direction: row;
 `;
 
 export const Img = styled.img`

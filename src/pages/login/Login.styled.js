@@ -23,6 +23,7 @@ export const Main = styled.main`
 
 export const Article = styled.article`
     display: flex;
+    flex-direction: row;
     justify-content: center;
     margin: 32px 0 0 0;
     padding: 0 0 32px 0;
@@ -35,6 +36,7 @@ export const Div = styled.div`
 
 export const DivForHorizontalItems = styled.div`
     display: flex;
+    flex-direction: row;
 `;
 
 export const DivOfLoginForm = styled.div`
@@ -50,6 +52,7 @@ export const DivOfLoginForm = styled.div`
 
 export const DivOfJoinForm = styled.div`
     display: flex;
+    flex-direction: row;
     ${Center}
     width: 100%;
     height: 63px;
