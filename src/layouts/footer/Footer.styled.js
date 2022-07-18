@@ -6,11 +6,6 @@ const Vertical = css`
     flex-direction: column;
 `;
 
-const Center = css`
-    justify-content: center;
-    align-items: center;
-`;
-
 export const Footer = styled.footer`
     ${Vertical}
     align-items: center;

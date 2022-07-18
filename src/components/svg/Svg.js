@@ -30,7 +30,7 @@ export const Plus = () => {
 export const Compass = () => {
     return (
         <S.Svg>
-            <polygon fill="none" stroke="currentColor" points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" />
+            <polygon fill="none" stroke="currentColor" strokeWidth="2" points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" />
             <polygon fillRule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056" />
             <circle fill="none" stroke="currentColor" strokeWidth="2" cx="12.001" cy="12.005" r="10.5" />
         </S.Svg>

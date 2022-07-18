@@ -14,36 +14,53 @@ const Home = ({ onChangeAuth }) => {
                 </S.Div>
                 <S.Div>
                     <S.NavMenuWrapper>
-                        <Svg.Home />
+                        <S.Link to="/">
+                            <Svg.Home />
+                        </S.Link>
                     </S.NavMenuWrapper>
                     <S.NavMenuWrapper>
-                        <Svg.Airplane />
+                        <S.Link to="/direct">
+                            <Svg.Airplane />
+                        </S.Link>
                     </S.NavMenuWrapper>
                     <S.NavMenuWrapper>
-                        <Svg.Plus />
+                        <S.Link to="/">
+                            <Svg.Plus />
+                        </S.Link>
                     </S.NavMenuWrapper>
                     <S.NavMenuWrapper>
-                        <Svg.Compass />
+                        <S.Link to="/explore">
+                            <Svg.Compass />
+                        </S.Link>
                     </S.NavMenuWrapper>
                     <S.NavMenuWrapper>
-                        <Svg.Heart />
+                        <S.Link to="/">
+                            <Svg.Heart />
+                        </S.Link>
                     </S.NavMenuWrapper>
                     <S.NavMenuWrapper>
                         <S.Link to="/" onClick={() => { onChangeAuth(false); }}>
-                            <span>
+                            <S.Span>
                                 <S.Img src={require('../../assets/sekhyuni.jpeg')} />
-                            </span>
+                            </S.Span>
                         </S.Link>
                     </S.NavMenuWrapper>
                 </S.Div>
             </S.Nav>
             <S.Main>
-                <S.HeaderOfContent>
-                    HeaderOfContent
-                </S.HeaderOfContent>
-                <S.MainOfContent>
-                    MainOfContent
-                </S.MainOfContent>
+                <section>
+                    <div>
+                        <S.HeaderOfContent>
+                            HeaderOfContent
+                        </S.HeaderOfContent>
+                        <S.MainOfContent>
+                            MainOfContent
+                        </S.MainOfContent>
+                    </div>
+                    <div>
+
+                    </div>
+                </section>
             </S.Main>
             <Footer />
         </S.Section>
